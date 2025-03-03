@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FAQ Section</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600|Roboto&display=swap" rel="stylesheet">
+</head>
+<style>
+	p,h1,h2,h3,h4,h5,h6,a {
+	margin: 0;
+	padding: 0;
+}
+
+.section-faq {
+	font-family: "Roboto", sans-serif;
+	padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-faq .header-section {
+    margin-bottom: 70px;
+}
+
+.section-faq .header-section .title {
+	font-family: "Poppins", sans-serif;
+	font-size: 40px;
+	position: relative;
+	padding-bottom: 35px;
+	margin-bottom: 30px;
+}
+
+.section-faq .header-section .title:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 3px;
+	background-color: #1556a6;
+}
+
+.section-faq .header-section .description {
+	font-size: 20px;
+    opacity: 0.7;
+}
+
+.section-faq .questions .single-question {
+	margin-bottom: 20px;
+}
+
+.section-faq .questions .single-question > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+	padding: 11px 20px;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.section-faq .questions .single-question:hover > div,
+.section-faq .questions .active > div {
+	border-color: #1556a6;
+	color: #1556a6;
+}
+
+.section-faq .questions .single-question h3 {
+	font-family: "Poppins", sans-serif;
+	font-size: 21px;
+}
+
+.section-faq .questions .single-question i {
+    font-size: 20px;
+		transition: transform .4s;
+}
+
+.section-faq .questions .active i {
+	transform: rotateX(180deg);
+}
+
+.section-faq .questions .single-question .answer {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    opacity: 0.7;
+    display: none;
+}
+
+.section-faq .question-form {
+	background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 50px 60px;
+}
+
+.section-faq .question-form .title {
+	font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+
+.section-faq .question-form form input,
+.section-faq .question-form form textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #1556a6;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px 15px;
+    transition: all .3s;
+    outline: none;
+}
+
+.section-faq .question-form form input {
+	margin-bottom: 10px;
+}
+
+.section-faq .question-form form textarea {
+	height: 100px;
+	min-height: 50px;
+}
+
+.section-faq .question-form form input:focus,
+.section-faq .question-form form textarea:focus {
+	background-color: #fff;
+	border-color: #000000;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+}
+
+.section-faq .question-form form .send-request {
+    font-family: "Poppins", sans-serif;
+    margin-top: 40px;
+    text-transform: uppercase;
+    background-color: #1556a6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    transition: box-shadow .3s;
+}
+
+.section-faq .question-form form .send-request:hover {
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.5);
+}
+
+@media(max-width: 991.9px) {
+	.section-faq .questions {
+	    margin-bottom: 60px;
+	}
+}
+</style>
+<body>
+
+	<!-- START SECTION FAQ -->
+
+	<section class="section-faq">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md-8">
+					<div class="header-section">
+						<h2 class="title">Frequently asked questions</h2>
+						<p class="description"></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="questions">
+						<div class="single-question">
+							<div>
+								<h3>What are the benefits of adopting a dog?</h3>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<p class="answer">Adopting a dog can bring companionship, emotional support, and increased physical activity. It also provides a loving home for a dog in need.</p>
+						</div>
+						<div class="single-question">
+							<div>
+								<h3>How many dog breeds are there?</h3>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<p class="answer">There are over 340 recognized dog breeds worldwide, each with unique characteristics and traits.</p>
+						</div>
+						<div class="single-question active">
+							<div>
+								<h3>What nutrients do dogs need?</h3>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<p class="answer">Dogs require a balanced diet that includes proteins, fats, carbohydrates, vitamins, and minerals. Consult your veterinarian for specific dietary recommendations based on your dog's age, breed, and health.</p>
+						</div>
+						<div class="single-question">
+							<div>
+								<h3>How much should I feed my dog?</h3>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<p class="answer">The amount of food your dog needs depends on factors such as age, size, activity level, and metabolism. Follow the feeding guidelines on the dog food packaging and consult your veterinarian for personalized advice.</p>
+						</div>
+						<div class="single-question">
+							<div>
+								<h3>Why does my dog chew on everything?</h3>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<p class="answer">Chewing is a natural behavior for dogs, especially puppies. It helps relieve teething pain and keeps their jaws strong. Provide appropriate chew toys to prevent destructive chewing.</p>
+						</div>
+						<div class="single-question">
+							<div>
+								<h3>Do dogs need regular dental care?</h3>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<p class="answer">Yes, regular dental care is essential for your dog's overall health. Brush your dog's teeth regularly and provide dental chews or toys to help maintain oral hygiene.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="question-form">
+						<h3 class="title">Make Your Question</h3>
+						<form>
+							<input type="text" placeholder="Name*">
+							<input type="text" placeholder="Email*">
+							<textarea placeholder="Write Somethings"></textarea>
+							<button type="submit" class="send-request">Send Request</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- / END SECTION FAQ -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(function() {
+
+"use strict";
+
+$(".section-faq .questions .active .answer").slideDown();
+
+$(".section-faq .questions .single-question > div").on("click", function() {
+	$(".section-faq .questions .single-question .answer").slideUp();
+	if($(this).parent().hasClass("active")) {
+		$(this).parent().removeClass("active");
+	}
+	else {
+		$(".section-faq .questions .single-question").removeClass("active");
+		$(this).parent().addClass("active");
+		$(this).next(".answer").slideDown();
+	}
+});
+
+});
+	</script>
+
+</body>
+</html>
