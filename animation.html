@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+    <button id="animate" style="margin:10px ;">Click</button>
+
+    <div id="animatedDiv" style="background-color: rgb(10, 231, 176); height: 100px;width: 100px;position: absolute;margin: 10px;">
+
+    </div>
+
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+                $("button").click(function(){
+          $("div").animate({
+            left: '5px',
+            opacity: '1',
+            height: '+=100px',
+            width: '+=100px',
+          });
+        }); 
+
+        // $("button").click(function(){
+        //   $("div").animate({
+        //     left: '0px',
+        //     opacity: '1',
+        //     height: 'toggle',
+        //     width: '100px',
+        //   });
+        // }); 
+
+
+        // $("button").click(function () {
+        //     var div = $("#animatedDiv");
+        //     div.animate({ height: '300px', opacity: '0.4' }, "slow");
+        //     div.animate({ width: '300px', opacity: '0.8' }, "slow");
+        //     div.animate({ height: '100px', opacity: '0.4' }, "slow");
+        //     div.animate({ width: '100px', opacity: '0.8' }, "slow");
+        // });
+
+    })
+</script>
+
+</html>
