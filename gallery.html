@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            min-height: 100vh;
+            background-color: #c0e6f9;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            max-width: 1350px;
+            width: 100%;
+            background-color: #91d2f3;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #b0daef;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            border: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background-color: #90d5f7;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .filter_button {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button.active {
+            background-color: #4070f4;
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+            height: 210px;
+        }
+
+        .filterable_cards {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cards {
+            flex-basis: calc(33.333% - 20px);
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 3px;
+        }
+
+        .card_body {
+            padding: 15px 20px 20px;
+        }
+
+        .card_title {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="filter_button">
+            <button class="active" data-name="all">show all</button>
+            <button data-name="Husky">Husky</button>
+            <button data-name="pug">pug</button>
+            <button data-name="labrador">labrador</button>
+        </div>
+    </div>
+    <!-- image cards -->
+
+    <div class="filterable_cards">
+        <div class="cards" data-name="Husky">
+            <img class="img" src="/img/pexels-tranmautritam-69433.jpg">
+            <div class="card_body">
+                <h6 class="card_title">husky</h6>
+            </div>
+        </div>
+
+        <div class="cards" data-name="pug">
+            <img class="img" src="/img/pug-babydov-7788864.jpg">
+            <div class="card_body">
+                <h6 class="card_title">pug</h6>
+            </div>
+        </div>
+
+        <div class="cards" data-name="labrador">
+            <img class="img" src="/img/labrador-helenalopesph-2253275.jpg">
+            <div class="card_body">
+                <h6 class="card_title">labrador</h6>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Select relevant HTML elements
+    const filterButtons = document.querySelectorAll(".filter_button button");
+    const filterableCards = document.querySelectorAll(".filterable_cards .cards");
+    // Function to filter cards based on filter buttons
+    const filterCards = (e) => {
+        document.querySelector(".filter_button .active").classList.remove("active");
+        e.target.classList.add("active");
+        filterableCards.forEach(card => {
+            // show the card if it matches the clicked filter or show all cards if "all" filter is clicked
+            if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+                return card.classList.replace("hide", "show");
+            }
+            card.classList.add("hide");
+        });
+    }
+    filterButtons.forEach(button => button.addEventListener("click", filterCards));
+</script>
+</html>
